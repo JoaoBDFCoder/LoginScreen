@@ -1,0 +1,9 @@
+body{
+  background-image: url(./static/images/telawowclassic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: center;
+
+  font-family: Ubuntu, Arial, sans-serif;
+}
