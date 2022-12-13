@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#login{
+  height: 100vh;
+}
+
+/* Forms Login */
 .div-login {
   display: flex;
   flex-direction: column;
@@ -39,7 +44,6 @@
 .button-login {
   font-family: 'Ubuntu', sans-serif;
   color: rgb(213, 162, 42);
-  background: rgb(147,26,8);
   background: radial-gradient(circle, rgb(103, 20, 8) 0%, rgb(121, 7, 7) 35%, rgb(89, 1, 7) 100%);
   border: solid 4px rgb(65, 65, 65);
   border-style: groove;
@@ -64,4 +68,86 @@
   color: rgb(213, 162, 42);
   margin-left: 2px;
   font-size: 13px;
+}
+
+/* Botões laterais */
+.button-laterals {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: rgb(213, 162, 42);
+  background: radial-gradient(circle, rgb(103, 20, 8) 0%, rgb(123, 12, 12) 35%, rgb(89, 1, 7) 100%);
+  border: solid 4px rgb(65, 65, 65);
+  border-style: groove;
+  border-radius: 6px;
+  width: 130px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.678);
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.div-buttons-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.div-buttons-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.div-master-buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 68%;
+}
+
+.button-quit {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: rgb(213, 162, 42);
+  background: radial-gradient(circle, rgb(103, 20, 8) 0%, rgb(123, 12, 12) 35%, rgb(89, 1, 7) 100%);
+  border: solid 4px rgb(65, 65, 65);
+  border-style: groove;
+  border-radius: 6px;
+  width: 130px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.678);
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Footer */
+
+.div-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-um {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.678);
+  color: rgb(213, 162, 42);
+  margin-left: 10px;
+}
+
+.footer-dois {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.678);
+  color: rgb(213, 162, 42);
+  margin-left: -180px;
 }
