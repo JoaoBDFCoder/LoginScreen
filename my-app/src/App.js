@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom'; 
 import './App.css';
 
-import LoginScreen from './components/LoginScreen';
-import CameIn from './components/CameIn';
+import LoginScreen from './components/js/LoginScreen';
+import CameIn from './components/js/CameIn';
 
 function App () {
   return (
