@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.div-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%;
+}
+
+.inputs-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.login-label {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: Light;
+  color: rgb(213, 162, 42);
+  text-shadow: 1px 0.4px 2px rgb(0, 0, 0);
+  margin-bottom: 3px;
+}
+
+.input-label {
+  background: rgba(0, 0, 0, 0.748);
+  border: rgb(125, 125, 125);
+  border-style: groove;
+  border-radius: 6px;
+  width: 167px;
+  height: 20px;
+  box-shadow: 1px 1px 4px;
+}
+
+.button-login {
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(213, 162, 42);
+  background: rgb(147,26,8);
+  background: radial-gradient(circle, rgb(103, 20, 8) 0%, rgb(121, 7, 7) 35%, rgb(89, 1, 7) 100%);
+  border: solid 4px rgb(65, 65, 65);
+  border-style: groove;
+  border-radius: 6px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  width: 180px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.678);
+  cursor: pointer;
+}
+
+.div-checkbox {
+  display: flex;
+}
+
+.input-checkbox {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.label-checkbox {
+  color: rgb(213, 162, 42);
+  margin-left: 2px;
+  font-size: 13px;
+}
