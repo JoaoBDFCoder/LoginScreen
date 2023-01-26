@@ -1,19 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/LoginScreen.css';
 import audio from '../../static/audio/audiowow.mp3';
 
 function LoginScreen() {
+  const [form, setForm] = useState({email: '', password: ''});
+
+  const emailValidate = (email) => {
+    if (email?.toString().includes('@') && email?.toString().includes('.')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  const passwordValidate = (password) => {
+    if (password?.toString().length > 6) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  const inputValidate = () => {
+    return emailValidate(form.email) && passwordValidate(form.password);
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!form.email) {
+      alert('Digite a conta');
+      return;
+    }
+    if (!inputValidate()) {
+      alert('Email ou senha inválidos');
+    } else {
+      alert('Logou')
+    }
+  }
+
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+    console.log('inputs', form);
+  }
+
   return (
     <div id="login">
-      <div>
-        <img width="250" height="120" src="https://logosmarcas.net/wp-content/uploads/2021/02/World-of-Warcraft-Logo.png" alt="logo wow shadowlands" />
-      </div>
 
-      {/* Music */}
-      <div className="div-audio">
-        <audio autoplay="true" controls="controls">
-          <source src={audio} type="audio/mp3" />
-        </audio>
+      <div className="div-static">
+        {/* Logo wow */}
+        <div className="div-logo">
+          <img width="250" height="120" src="https://logosmarcas.net/wp-content/uploads/2021/02/World-of-Warcraft-Logo.png" alt="logo wow shadowlands" />
+        </div>
+        {/* Music */}
+        <div className="div-audio">
+          <audio className="audio-master" src={audio} preload="auto" autoplay></audio>
+        </div>
       </div>
 
       {/* Login */}
@@ -28,16 +69,16 @@ function LoginScreen() {
         <form className="div-login">
           <div className="inputs-login">
             <label className="login-label">Email or Phone</label>
-            <input className="input-label" type="text" />
+            <input name="email" onChange={handleChange} className="input-label" type="email" />
           </div>
 
           <div className="inputs-login">
             <label className="login-label">Password</label>
-            <input className="input-label" type="text" />
+            <input name="password" onChange={handleChange} className="input-label" type="password" />
           </div>
 
           <div>
-            <button className="button-login" type="submit">
+            <button className="button-login" type="submit" onClick={handleSubmit}>
               Log In
             </button>
           </div>
